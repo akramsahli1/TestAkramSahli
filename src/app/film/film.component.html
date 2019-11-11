@@ -1,0 +1,11 @@
+<h2>{{titre}}</h2>
+<img [src]="affiche"/><p>Durée: {{duree}} minutes Profil <select name="option" [(ngModel)]="profil" (click)="onAffichePrix()">
+    <option value="Autre">Autre</option>
+    <option value="Etudiant">Etudiant</option>
+    <option value="Retraite">Retraité</option>
+</select> <ng-container [ngSwitch]="profil" >
+    <p *ngSwitchCase="'Autre'">6 DT</p>
+    <p *ngSwitchCase="'Etudiant'">3 DT</p>
+    <p *ngSwitchDefault>2.5 Dt</p>
+</ng-container></p>
+<p></p>

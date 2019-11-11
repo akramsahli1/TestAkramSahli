@@ -1,0 +1,7 @@
+<h1>Films à voir aujourd'hui</h1>
+<h2>{{date | date:d/m}}</h2>
+<ng-container *ngFor="let f of films">
+    <div [ngClass] ="f.duree>90?'c1':'c2'">
+    <app-film [titre]="f.titre" [affiche]="f.affiche" [duree]="f.duree"></app-film>
+    </div>
+</ng-container>
